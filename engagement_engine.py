@@ -7,7 +7,6 @@ class EngagementEngine:
     def process_interaction(self, itype, count=1):
         if count < 0:
             raise ValueError("Negative count")
-
         weights = {"like": 1, "comment": 5, "share": 10}
         if itype not in weights:
             return False
@@ -15,7 +14,6 @@ class EngagementEngine:
         points = weights[itype] * count
         if self.verified:
             points *= 1.5
-
         self.score += points
         return True
 
