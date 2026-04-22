@@ -37,8 +37,3 @@ jobs:
           name: coverage-html-report
           path: htmlcov/
 
-      - name: Build Docker image
-        run: docker build -t sanskriti-engagement-engine .
-
-      - name: Run Docker container
-        run: docker run sanskriti-engagement-engine
